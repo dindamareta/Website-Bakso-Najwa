@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <title>View ProfitOrLoss</title>
+  <link rel="stylesheet" href="../../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+<script type="text/javascript">
+
+    FusionCharts.ready(function(){
+    var fusioncharts = new FusionCharts({
+    type: 'hlineargauge',
+    renderAt: 'chart-container',
+    id: 'cpu-linear-gauge-1',
+    width: '400',
+    height: '190',
+    dataFormat: 'json',
+    dataSource: {
+        "chart": {
+            "theme": "fusion",
+
+            "lowerLimit": "0",
+            "upperLimit": "100",
+            "numberSuffix": "%",
+            "chartBottomMargin": "80",
+            "valueFontSize": "11",
+            "valueFontBold": "0",
+
+
+        },
+        "colorRange": {
+            "color": [{
+                "minValue": "0",
+                "maxValue": "84,31",
+                "label": "84,31%",
+            },{
+                "minValue": "84,31",
+                "maxValue": "100",
+                "label": "15,68%",
+                
+            }]
+        },
+        
+        
+        "annotations": {
+            "origw": "400",
+            "origh": "190",
+            "autoscale": "1",
+            "groups": [{
+                "id": "range",
+              
+            }]
+        }
+    }
+}
+);
+    fusioncharts.render();
+    });
+</script>
+</head>
+
+<body style="" class="rounded-circle">
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary py-1">
+    <div class="container"> <a class="navbar-brand" href="#" style="font-size:30px;">
+        <b class="text-white"> BAKSO NAJWA</b>
+      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar16">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar16">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-2"> <a href="#" class="nav-link d-inline-flex justify-content-center align-items-center text-light text-center"><i class="fa fa-fw fa-home fa-2x" style="color:white;"></i>HOME</a> </li>
+          <li class="nav-item mx-2"> <a class="nav-link d-inline-flex justify-content-center align-items-center text-light" href="#"><i class="fa fa-info-circle fa-2x fa-fw" style="color:white;"></i>HELP</a> </li>
+          <li class="nav-item mx-2 d-inline-flex justify-content-center align-items-center text-light"> <a href="#" class="nav-link text-light text-center d-inline-flex justify-content-center align-items-center"><i class="fa fa-fw fa-sign-out fa-2x" style="color:white;"></i>LOGOUT</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="display-1 text-center">ProfitOrLoss</h1>
+        <div class="text-center" id="chart-container">FusionCharts XT will load here!</div>
+      </div>
+    </div>
+  </div>
+  <div class="py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div id="toolbar">
+    <select class="form-control" placeholdre="Bulan">
+        <option value="">Bulan</option>
+        <option value="all">January</option>
+        <option value="selected">Febuary</option>
+    </select>
+
+</div>
+
+
+        </div>
+         <div class="col-md-2">
+          <div id="toolbar">
+    <select class="form-control" placeholdre="Tahun">
+        <option value="">Tahun</option>
+        <option value="all">2017</option>
+        <option value="selected">2016</option>
+    </select>
+    
+</div>
+
+
+        </div>
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4 text-left">
+          <form class="form-inline">
+            <div class="input-group"> <input type="search" class="form-control shadow" placeholder="Find Your Data" style="border-radius: 20px; bg">
+              <div class="input-group-append"> <button class="btn mx-1 btn-primary" type="button" style="border-radius:20px;">Search</button> </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form class="form-inline">
+  </form>
+  <div class="h-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 shadow-none">
+          <!-- <table class="table-responsive table-primary shadow justify-content-center align-items-center" style="background-color: rgba(64, 147, 194, 0.8); border-radius:10px"> -->
+            <!-- kalau ga mau gini pake yang atas -->
+            <table class="table table-bordered" style="background-color: rgba(64, 147, 194, 0.8);  border-radius:10px"> 
+            <thead>
+              
+              <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">Total Pemesanan</th>
+                <th class="text-center">Total Pengeluaran</th>
+                <th class="text-center">Profit Or Loss</th>
+                <th class="text-center">Bulan</th>
+                <th class="text-center">Tahun</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-0 align-items-center justify-content-center text-right">
+    <div class="container">
+      <ul class="pagination justify-content-end">
+        <li class="page-item"> <a class="page-link" href="#"> <span>Prev</span> <span class="sr-only" style="border-radius:20px">Previous</span> </a> </li>
+        <li class="page-item"> <a class="page-link" href="#">1</a> </li>
+        <li class="page-item"> <a class="page-link" href="#">2</a> </li>
+        <li class="page-item"> <a class="page-link" href="#">3</a> </li>
+        <li class="page-item rounded-circle"> <a class="page-link" href="#">4</a> </li>
+        <li class="page-item rounded-circle"> <a class="page-link" href="#"> <span style="border-radius:20px">Next</span> <span class="sr-only">Next</span> </a> </li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+
+
+  <div class="modal fade" id="edit<?php echo $row->idProfitOrLoss; ?>" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <?php echo form_open("Staff_Gudang/editProfitOrLoss"); ?>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Edit ProfitOrLoss</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>          
+        </div>
+        <div class="modal-body" style="background-color: #4093C2;">
+          <input type="hidden" name="idkar" value="<?php echo $row->idProfitOrLoss; ?>">
+          <div class="form-group">
+            <label for="idProfitOrLoss" style="color: white;"><b>ID: </b></label>
+            <input type="text" class="form-control" id="idProfitOrLoss" name="idProfitOrLoss" value="<?php echo $row->idProfitOrLoss; ?>" placeholder="ID ProfitOrLoss" required>           
+          </div>
+          <div class="form-group">
+            <label for="Jumlah" style="color: white;"><b>Jumlah Pesanan: </b></label>
+            <input type="text" class="form-control" id="jumlah" name="jumlah" value="<?php echo $row->jumlah; ?>" placeholder="Jumlah ProfitOrLoss" required>           
+          </div>
+          <div class="form-group">
+            <label for="Total Harga" style="color: white;"><b>Total Harga: </b></label>
+            <input type="text" class="form-control" id="totalharga" name="totalharga"  value="<?php echo $row->totalharga; ?>" placeholder="Total Harga" required>           
+          </div>
+          <div class="form-group">
+            <label for="status" style="color: white;"><b>Status Pembayaran: </b></label>
+            <input type="text" class="form-control" id="status" name="status" value="<?php echo $row->status; ?>" placeholder="status ProfitOrLoss" required>           
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="modal-footer" style="opacity: 0%;">
+          <button type="submit" class="btn btn-success mx-3 shadow text-center align-items-center justify-content-center" data-toggle="modal" style=" backgroud-color: #1E8D4D; border-radius: 20px;  width: 76.65px; height: 35px;"> Edit</button>
+        </div>
+        <?php echo form_close(); ?>
+    </div> 
+
+    <div class="modal fade" id="input<?php echo $row->idProfitOrLoss; ?>" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <?php echo form_open("Service/inputProfitOrLoss"); ?>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Input ProfitOrLoss</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>          
+        </div>
+        <div class="modal-body" style="background-color: #4093C2;">
+          <input type="hidden" name="idkar" value="<?php echo $row->idProfitOrLoss; ?>">
+          <div class="form-group">
+            <label for="idProfitOrLoss" style="color: white;"><b>ID: </b></label>
+            <input type="text" class="form-control" id="idProfitOrLoss" name="idProfitOrLoss" value="<?php echo $row->idProfitOrLoss; ?>" placeholder="ID ProfitOrLoss" required>           
+          </div>
+          <div class="form-group">
+            <label for="Jumlah" style="color: white;"><b>Jumlah Pesanan: </b></label>
+            <input type="text" class="form-control" id="jumlah" name="jumlah" value="<?php echo $row->jumlah; ?>" placeholder="Jumlah ProfitOrLoss" required>           
+          </div>
+          <div class="form-group">
+            <label for="totalharga" style="color: white;"><b>Total Harga: </b></label>
+            <input type="text" class="form-control" id="totalharga" name="totalharga"  value="<?php echo $row->totalharga; ?>" placeholder="Total Harga" required>           
+          </div>
+          <div class="form-group">
+            <label for="status" style="color: white;"><b>Status Pembayaran: </b></label>
+            <input type="text" class="form-control" id="status" name="status" value="<?php echo $row->status; ?>" placeholder="status ProfitOrLoss" required>           
+          </div>
+          <div class="form-group">
+            <label for="tglpesan" style="color: white;"><b>Tgl Pesanan: </b></label>
+            <input type="text" class="form-control" id="tglpesan" name="tglpesan" value="<?php echo $row->tglpesan; ?>" placeholder="Tgl Pesan" required>           
+          </div>
+          <div class="form-group">
+            <label for="tglbayar" style="color: white;"><b>Tgl Bayar </b></label>
+            <input type="text" class="form-control" id="tglbayar" name="tglbayar" value="<?php echo $row->tglbayar; ?>" placeholder="Tgl Bayar" required>           
+          </div>
+          <div class="form-group">
+            <label for="totaldibayar" style="color: white;"><b>Total diBayar </b></label>
+            <input type="text" class="form-control" id="totaldibayar" name="totaldibayar" value="<?php echo $row->totaldibayar; ?>" placeholder="Total diBayar" required>           
+          </div>
+        
+        </div>
+      </div>
+      <div class="modal-footer" style="opacity: 0%;">
+          <button type="submit" class="btn btn-success mx-3 shadow text-center align-items-center justify-content-center" data-toggle="modal" style=" backgroud-color: #1E8D4D; border-radius: 20px;  width: 76.65px; height: 35px;"> Submit</button>
+        </div>
+        <?php echo form_close(); ?>
+      </div>
+    </div> 
+</body>
+
+</html>
